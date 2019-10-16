@@ -1,80 +1,165 @@
+<!DOCTYPE html>
+
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-<title>Braulios Portfolio: About Me</title>
-<link rel "stylesheet" type="text/css" href="stylesheet.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<style type="text/css">
-@import url("../Calibri/stylesheet.css");<!–– [2.] (On All)-->
-.portfolio {
-    font-family: Calibri;
-}
-.sidenav {
-    height: 100%;
-    width: 175px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #46b8b0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 30px;
-    color: #0073BA;
-    display: block;
-}
-.sidenav a:hover {
-    color: #FFFFFF;
-}
-.main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding-left: 20%;
-    padding-right: 20%;
+
+<title>index</title>
+
+<style>
+/*https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm*/
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #040F0F;
+  font-family: "Bookman";
+  scroll-behavior: smooth;
+  color: #FCFFFC;
 }
 
-@media screen and (max-height: 450px) {
-.sidenav {
-    padding-top: 15px;
+.bgimg-1, .bgimg-2 {
+  height: 100%;
+  position: relative;
+  opacity: 0.98;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-.sidenav a {
-    font-size: 20px;
+.bgimg-1 {
+  background-image: url("download.jpg");/*https://www.pexels.com/photo/technology-computer-lines-board-50711/*/
+  min-height: 100%;
+  min-width: 50%;
 }
+
+.bgimg-2 {
+  background-image: url("download1.jpg");
+  min-height: 100%;
 }
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #2D3A3A;
+  font-family: "Bookman";
+  font-weight: bold;
+}
+
+.caption span.border {
+  background-color: #2D3A3A;
+  color: #FCFFFC;
+  padding: 1vw;
+  font-size: 5vw;
+  letter-spacing: 0.5vw;
+}
+
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover*/
+.button {
+  background-color: #2D3A3A; 
+  border: none;
+  color: #FCFFFC;	
+  padding: 0.7vw 2vw;
+  text-align: center;
+  font: 2vw "Bookman";
+  font-weight: bold;
+  margin: 0.3vw 0.3vw;
+  letter-spacing: 0.1vw;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.button:hover {
+  background-color: #FCFFFC; 
+  color: #2D3A3A;
+}
+
+.header {
+  text-align: center;
+  background: #44714E;
+  color: #FCFFFC;
+  font-size: 3vw;
+  padding: 1%
+}
+
+#AM{}
+#PROJ{}
+#INDEV{}
+#OTHER{}
+#HOB{}
+#CONT{}
+
 </style>
-<div class="sidenav"><a href="AboutMeStart.html"><font color="black">About Me</font></a> <a href="OOP.html">OOP</a> <a href="Recursion.html">Recursion</a> <a href="Array.html">Array</a><a href="sort.html">Sorting</a> <a href="OOP2.html">OOP 2</a> <a href="Contact.html">Contact</a> <a href="BIB.html">Bibliography</a><a href="proj.html">Project Plans</a></div>
-<div class="main">
-  <p> <FONT SIZE=+4> <Center> <B> About Me!</font> </Center> </B></p>
+</head>
 
-<FONT SIZE=+2>
-  <p><center>Hello my name is Braulio Andres Carrion Corveira. I am a student at William Lyon Mackenzie CI. Im a hard working student who is dedicated to succeed and do well. My best skill is problem solving which gives me a natural attraction towards Math, therfore it is my favourite subject. English on the otherhand isn't that good for me. English is my second language and it is also my worst subject, but that  doesn't prevent me from going forward in life. I always give it my all and never give up. When it comes to group work I try my best not to let my teamates down, while at the same time also making sure they don't let me down.</p>
-	  
-	
-	<table border=1>
-  <tr>
-    <td>
-  <img src="Banner-Final.png" width="940" height="207" alt=""/></td>
-  </tr>
-</table>
-  <p>My friends always describe me as nice, welcoming, &amp; openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get  comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.</p>
-  <p><table border=1>
-  <tr>
-    <td><img src="Friends562x464_0.jpg" width="562" height="464" alt=""/></td>
-  </tr>
-</table>
-    </center>
-  </p>
-  <p>I Like:</p>
-  <ul>
-    <li>Photography</li>
-    <li>3D Printing/Modelling</li>
-    <li>Video Games</li>
-    <li>Electronic Circuits</li>
-  </ul>
-  <p>&nbsp;</p>
+<body>
+<div class = "bgimg-1">
+<div class = "caption"><span class = "border">Braulio A. Carrion Corveira
+</span>
 </div>
-</body></html>
+</div>
+
+<center>
+<a href="#AM"><button class="button">About Me
+</button></a>
+<a href="#PROJ"><button class="button">Projects
+</button></a>
+<a href="#INDEV"><button class="button">In Development
+</button></a>
+<a href="#OTHER"><button class="button">Other Projects
+</button></a>
+<a href="#HOB"><button class="button">Hobbies
+</button></a>
+<a href="#CONT"><button class="button">Contact
+</button></a>
+</center>
+
+<div class="header" id="AM">
+<h1>About Me
+</h1>
+</div>
+
+<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 1.5vw;">
+My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
+</div>
+
+<div class="header" id="PROJ">
+<h1>Projects
+</h1>
+</div>
+
+<div class="header" id="INDEV">
+<h1>In Development
+</h1>
+</div>
+
+<div class="header" id="OTHER">
+<h1>Other Projects
+</h1>
+</div>
+
+<div class="header" id="HOB">
+<h1>Hobbies
+</h1>
+</div>
+
+<div class="header" id="CONT">
+<h1>Contact
+</h1>
+</div>
+
+<div class = "bgimg-2">
+<div class = "caption"><span class = "border">Braulio A. Carrion Corveira
+</span>
+</div>
+</div>
+
+</body>
+</html>
