@@ -72,14 +72,19 @@ body, html {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
 }
 
 .button:hover {
   background-color: #FCFFFC; 
   color: #2D3A3A;
+}
+
+.divider{
+    width:5%;
+    height:auto;
+    display:inline-block;
 }
 
 .header {
@@ -110,17 +115,20 @@ body, html {
 <center>
 <a href="#AM"><button class="button">About Me
 </button></a>
+<div class="divider"/>
 <a href="#PROJ"><button class="button">Projects
 </button></a>
+<div class="divider"/>
 <a href="#INDEV"><button class="button">In Development
 </button></a>
+<div class="divider"/>
 <a href="#OTHER"><button class="button">Other Projects
 </button></a>
 <a href="#HOB"><button class="button">Hobbies
 </button></a>
 <a href="#CONT"><button class="button">Contact
 </button></a>
-</center>	
+</center>
 
 <div class="header" id="AM">
 <h1>About Me
@@ -137,7 +145,9 @@ My friends always describe me as nice, welcoming, & openhanded and I couldn't ag
 </div>
 
 <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-<img style="padding: 0 5%; float: left;" src="gameIcon.png" alt="Konflyx.io" width=25% height=25%>
+<img style="padding: 5%; float: left;" src="gameIcon.png" alt="Konflyx.io" width=25% height=25%>
+<a href="#AM"><button class="button">About Me
+</button></a>
 <p><style = "margin-top: 10%,"></style></p>
 My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.</div>
 
