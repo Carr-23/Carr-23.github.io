@@ -1,201 +1,431 @@
 <!DOCTYPE html>
-
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
+    <title>index</title>
+    <style>
+        /*https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm*/
 
-<title>Braulio Carrion Corveira</title>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-color: #1c1c1c;
+            font-family: "Bookman";
+            scroll-behavior: smooth;
+            color: #FCFFFC;
+        }
 
-<style>
-/*https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm*/
-body, html {
-  height: 100%;
-  margin: 0;
-  background-color: #040F0F;
-  font-family: "Bookman";
-  scroll-behavior: smooth;
-  color: #FCFFFC;
-}
+        .bgimg-1,
+        .bgimg-2 {
+            height: 100%;
+            position: relative;
+            opacity: 0.98;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-.bgimg-1, .bgimg-2 {
-  height: 100%;
-  position: relative;
-  opacity: 0.98;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+        .bgimg-1 {
+            background-image: url("download.jpg");
+            /*https://www.pexels.com/photo/technology-computer-lines-board-50711/*/
+            min-height: 100%;
+            min-width: 100%;
+        }
 
-}
-.bgimg-1 {
-  background-image: url("download.jpg");/*https://www.pexels.com/photo/technology-computer-lines-board-50711/*/
-  min-height: 100%;
-  min-width: 100%;
-}
+        .bgimg-2 {
+            background-image: url("download2.jpg");
+            min-height: 100%;
+        }
 
-.bgimg-2 {
-  background-image: url("download1.jpg");/* https://www.pexels.com/photo/macro-shot-of-water-drops-on-leaf-326461/*/
-  min-height: 100%;
-  min-width: 100%;
-}
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 40%;
+            width: 100%;
+            text-align: center;
+            color: #2D3A3A;
+            font-family: "Bookman";
+            font-weight: bold;
+        }
 
-.caption {
-  position: absolute;
-  left: 0;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  color: #2D3A3A;
-  font-family: "Bookman";
-  font-weight: bold;
-}
+        .caption span.border {
+            background-color: #2D3A3A;
+            color: #FCFFFC;
+            padding: 1vw;
+            font-size: 5vw;
+            letter-spacing: 0.5vw;
+        }
 
-.caption span.border {
-  background-color: #2D3A3A;
-  color: #FCFFFC;
-  padding: 1vw;
-  font-size: 5vw;
-  letter-spacing: 0.5vw;
-}
+        #navbar {
+            overflow: hidden;
+            background-color: #2D3A3A;
+        }
+        /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover*/
 
-/*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover*/
-.button {
-  background-color: #2D3A3A; 
-  border: none;
-  color: #FCFFFC;	
-  padding: 0.7vw 2vw;
-  text-align: center;
-  font: 2vw "Bookman";
-  font-weight: bold;
-  margin: 0.3vw 0.3vw;
-  letter-spacing: 0.1vw;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  position: sticky;
-  top: 0;
-}
+        .button {
+            border: none;
+            background-color: #2D3A3A;
+            color: #FCFFFC;
+            padding: 0.7vw 2vw;
+            text-align: center;
+            font: 2vw "Bookman";
+            font-weight: bold;
+            margin: 0.3vw 0.3vw;
+            letter-spacing: 0.1vw;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
 
-.button:hover {
-  background-color: #FCFFFC; 
-  color: #2D3A3A;
-}
+        .button5 {
+            border-radius: 40%;
+            font: 1vw "Bookman";
+            padding: 0.5vw 1vw;
+            margin: 1vw 0.3vw;
+        }
 
-.divider{
-    width:5%;
-    height:auto;
-    display:inline-block;
-}
+        .img {
+            border-radius: 100%;
+            padding-top: 2%;
+        }
 
-.header {
-  text-align: center;
-  background: #44714E;
-  color: #FCFFFC;
-  font-size: 3vw;
-  padding: 1%
-}
+        .img2 {
+            transition: .5s ease;
+        }
 
-#AM{}
-#PROJ{}
-#INDEV{}
-#OTHER{}
-#HOB{}
-#CONT{}
+        .imgleft {
+            border-radius: 25%;
+            float: left;
+            padding-right: 3%;
+            padding-bottom: 2%;
+            transition: .5s ease;
+        }
 
-</style>
+        .imgleft1 {
+            float: left;
+            padding-right: 3%;
+            padding-bottom: 2%;
+            transition: .5s ease;
+        }
+
+        .imgright {
+            border-radius: 25%;
+            float: right;
+            padding-left: 3%;
+            padding-bottom: 2%;
+            transition: .5s ease;
+        }
+
+        .imgright1 {
+            float: right;
+            padding-left: 3%;
+            padding-bottom: 2%;
+            transition: .5s ease;
+        }
+
+        .clearfix {
+            overflow: auto;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + .content {
+            padding-top: 60px;
+        }
+
+        .button:hover {
+            background-color: #FCFFFC;
+            color: #2D3A3A;
+        }
+
+        .header {
+            text-align: center;
+            background: #44714E;
+            color: #FCFFFC;
+            font-size: 3vw;
+            padding: 1%
+        }
+
+        .responsive {
+            max-width: 40%;
+            height: auto;
+        }
+
+        .container {}
+
+        .container:hover .img2 {
+            opacity: 0.3;
+        }
+
+        .container:hover .imgleft {
+            opacity: 0.3;
+        }
+
+        .container:hover .imgleft1 {
+            opacity: 0.3;
+        }
+
+        .container:hover .imgright {
+            opacity: 0.3;
+        }
+
+        .container:hover .imgright1 {
+            opacity: 0.3;
+        }
+
+        a:link {
+            color: green;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        a:active {
+            color: white;
+        }
+
+        #AM {}
+
+        #PROJ {}
+
+        #INDEV {}
+
+        #OTHER {}
+
+        #HOB {}
+
+        #CONT {}
+    </style>
 </head>
 
 <body>
-<div class = "bgimg-1">
-<div class = "caption"><span class = "border">Braulio A. Carrion Corveira
-</span>
-</div>
-</div>
+    <div class="bgimg-1">
+        <div class="caption"><span class="border">Braulio A. Carrion Corveira
+            </span>
+        </div>
+    </div>
+    <div id="navbar">
+        <center>
+            <a href="javascript:void(0)">
+                <a href="#AM">
+                    <button class="button">About Me
+                    </button>
+                </a>
+                <a href="#PROJ">
+                    <button class="button">Projects
+                    </button>
+                </a>
+                <a href="#INDEV">
+                    <button class="button">In Development
+                    </button>
+                </a>
+                <a href="#OTHER">
+                    <button class="button">Other Projects
+                    </button>
+                </a>
+                <a href="#HOB">
+                    <button class="button">Hobbies
+                    </button>
+                </a>
+                <a href="#CONT">
+                    <button class="button">Contact
+                    </button>
+                </a>
+            </a>
+        </center>
+    </div>
+    <div class="content">
+        <div class="header" id="AM">
+            <h1>About Me</h1>
+        </div>
+        <center>
+            <img class="img" src="me.jpg" alt="Me" class="responsive" width="200" height="200">
+        </center>
+        <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
+            &nbsp &nbsp &nbsp &nbsp Currently I am studying Computer Engineering in the University of Waterloo. I am a first year student with a lot still ahead of me. As you can see from this website, front-end isn't really my cup of tea. Instead I enjoy backend work or hardware since I enjoy the problem solving aspect of things.
+            <p></p>
+            &nbsp &nbsp &nbsp &nbsp Growing up, I was always around computers thanks to my dad, so as a kid I got close to them. It wasn't until I was in grade 7 when I learned more about programming. Thats when I realized the potential that can come from it. I started trying to learn how to code with X-Code, however I dropped it soon after and it wasn't until grade 10, when I put more time into learning programming.
+            <>
+                </p>
+                &nbsp &nbsp &nbsp &nbsp Now im looking to expand my knowledge of the programming world. I want to learn more, and possibly publish more software. My goal for the end of the year is to learn React Native and be able to make my own app with great UI.
+        </div>
+        <center>
+            <a href="Resume.pdf" target="_blank">
+                <button class="button button5">Resume
+                </button>
+            </a>
+        </center>
+        <div class="header" id="PROJ">
+            <h1>Projects</h1>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 23px;">
+                <div class="container">
+                    <a href="https://play.google.com/store/apps/details?id=com.Pawmocca.BreakerDuel" target="_blank">
+                        <img class="imgleft" src="breakerDuel.png" alt="Breaker Duel" class="responsive" width="200" height="200"></a>
+                </div>
+                &nbsp &nbsp &nbsp &nbsp <b>Breaker Duel</b>: This is a 2 player versus game inspired by the games Pong and Breakout. I was the head developer on this project since I had more knowledge with Unity Engine. I was in charge of majority of the programming and creating all of the assets of the game. After completion we published Breaker Duel on the Google Play Store.
+            </div>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 23px;">
+                <div class="container">
+                    <a href="https://github.com/pivot5/Konflyx.io" target="_blank">
+                        <img class="imgright" src="gameIcon.png" alt="Konflyx.io" class="responsive" width="200" height="200"></a>
+                </div>
+                &nbsp &nbsp &nbsp &nbsp <b>Konflyx.io</b>: This is a single player conflict resolution game.This game teaches the player how to handle conflict in different stages in their life, kid, adolescent, and adulthood. Using Object Oriented Programming I created classes for everything that was gonna be repeated, such as letters. This allowed us to put together a final version of the game fairly quickly. This also allows for external modifications to be made. People have editied the text file to make a new script and make a different story, and thanks to OOP this can be done without any further code required.
+            </div>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 23px;">
+                <div class="container">
+                    <a href="https://github.com/Carr-23/iCar" target="_blank">
+                        <img class="imgleft" src="topView.png" alt="iCar" class="responsive" width="200" height="200"></a>
+                </div>
+                &nbsp &nbsp &nbsp &nbsp <b>iCar</b>: Created an "Intelligent Car" that would be able to follow a black line on its own without assistance. I was the project manager and looked over the programming section. On the others hand I did most of the hardware work, since it was my strong suit. The iCar was a school project and everyone had to create on, so we took it upon ourselves to make the best one. Our car was the only one that was able to complete the final level, not only that, but our car was the fastest of the bunch.
+            </div>
+        </div>
+        <div class="header" id="INDEV">
+            <h1>In Development</h1>
+        </div>
 
-<center>
-<a href="#AM"><button class="button">About Me
-</button></a>
-<a href="#PROJ"><button class="button">Projects
-</button></a>
-<a href="#INDEV"><button class="button">In Development
-</button></a>
-<a href="#OTHER"><button class="button">Other Projects
-</button></a>
-<a href="#HOB"><button class="button">Hobbies
-</button></a>
-<a href="#CONT"><button class="button">Contact
-</button></a>
-</center>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 25px;">
+                <img class="imgleft" src="encrypt.png" alt="Breaker Duel" class="responsive" width="200" height="200"> &nbsp &nbsp &nbsp &nbsp Over last summer I was really interested in cryptography and the history behind many famous encrypted codes. The one that caught my attention the most is Cicada 3301. From there I started to look more into cybersecuirty and how it works.
+                <p></p>
+                &nbsp &nbsp &nbsp &nbsp Since I knew how to code one of my friends came to me with the idea of an ecryption alogirthm. Since then we have been working on the encryption.
+                <p></p>
+                <p></p><u>As of now it is still incomplete</u>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 25px;">
+                <img class="imgright" src="coin.png" alt="Konflyx.io" class="responsive" width="200" height="200"> &nbsp &nbsp &nbsp &nbsp As a side project, my friend and I were interested in creating our own Crypto currency. Since then we have put a tone of time into researching how it works, more specificly block chain technology. We now know the inside outs of how block chain works, however due to our limited amount of time, haven't been able to start programming it and putting it all together, however we hope to do this over the Summer.
+                <p></p>
+                <p></p><u>As of now it hasn't been started</u>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 25px;">
+                <img class="imgleft" src="cnc.png" alt="iCar" class="responsive" width="300" height="300"> &nbsp &nbsp &nbsp &nbsp Throughout highschool I have had a my own 3D printer that was gifted to me by my cousin, who does a lot of working wiht 3D printing technology. It wasn't until grade 11, when I started to get a little bored of the 3D printer, so Instead I looked towards CNC Mills.
+                <p></p>
+                &nbsp &nbsp &nbsp &nbsp After looking into various designs for CNC machines and how they functioned, I went ahead and bought a CNC Shield. I took the spare stepper motors I had, and began wiring everything together. After finally finishing the skeleton of the CNC machine, and being able to successfully run G-Code on it, then it was time to build the frame and put the whole CNC together.
+                <p></p>
+                <p></p><u>As of now it is still incomplete</u>
 
-<div class="header" id="AM">
-<h1>About Me
-</h1>
-</div>
+            </div>
+        </div>
 
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
+        <div class="header" id="OTHER">
+            <h1>Other Projects</h1>
+        </div>
+        <div style="padding:2vw 15vw;text-align: justify;font-size: 15px;">
+            <table style="width:100%" border="1" align="center">
+                <tr>
+                    <td><a href="https://github.com/Carr-23/T-Intersection" target="_blank">T-Intersection</a>: I created a T-Intersection with an Arduino Uno and multiple sensors and servos. I overall build of the project was made with a lot of 3D printed components that I 3D modelled on my own using 3Ds Max.</td>
+                    <td><a href="https://github.com/Carr-23/Minesweeper" target="_blank">Minesweeper</a>: What more can I say, it's Minesweeper! This is your traditional Minesweeper game with added aesthetics so give the game a more modern look to it.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/Carr-23/Where-is-Waldo-" target="_blank">Java Website</a>: In grade 12 we hade to make a portfolio based on all our knowledge of Java.</td>
+                    <td><a href="https://github.com/Carr-23/ICS12-AP-Portfolio" target="_blank">Where is Waldo</a>: Created a software version of Where is Waldo</td>
+                </tr>
+            </table>
+        </div>
+        <div class="header" id="HOB">
+            <h1>Hobbies</h1>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 26px;">
+                <img class="imgleft1" src="Printer.jpg" alt="Printer" class="responsive" width="250" height="300"> &nbsp &nbsp &nbsp &nbsp For almost 4 years now I have had my own 3D printer and I have used it quite a bit. Since the one I have isn't some high end "plug and print" one, then I had to learn the in's and out's of it, because malfunction is common. Throughout the years I have learned the proper techniques to printing the best part and how to handle the hardware itself. The main thing I loved about the having a 3D printer is being able to save money. When buy someone an expensive gift when you could 3D model and 3D print them something that comes from the heart!
+            </div>
+        </div>
+        <div class="clearfix">
+            <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 24px;">
+                <div class="container">
+                    <a href="https://www.instagram.com/drafting_art/" target="_blank">
+                        <img class="imgleft1" src="Bird.jpg" alt="Bird" class="responsive" width="300" height="350"></a>
+                </div>
+                My whole family has always been artistic, however my art is photography. My uncle gifted my sister and I a very high end camera to use and learn with. Since then I have learned many techniques used with photography. The thing I enjoy most about photography is capturing nature. I love going outside in the wilderness and taking pictures of what I see. Along side photography I have learned to carefully edit photos using Lightroom, in order to bring out the best in every photo.
+                <p></p>
+                <p></p>
+                <div class="container">
+                    <a href="https://www.instagram.com/drafting_art/" target="_blank">
+                        <img class="imgright1" src="moon.jpg" alt="Konflyx.io" class="responsive" width="175" height="175"></a>
+                </div>
+                Recently I am starting to get into astrophotography, however I don't get much time to get to do it. Probably my goal is to one day capture a sharp picture of all our planents in our solar system
 
-<div class="header" id="PROJ">
-<h1>Projects
-</h1>
-</div>
+            </div>
+        </div>
+        <div class="header" id="CONT">
+            <h1>Contact</h1>
+        </div>
 
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-<img style="padding: 2%; float: left;" src="gameIcon.png" alt="Konflyx.io" width=25% height=25%>
-<p><style = "margin-top: 10%,"></style></p>
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.</div>
+        <table border="0" align="center" cellpadding="30%">
+            <div class="clearfix">
+                <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
+                    <tr>
+                        <td>
+                            <div class="container">
+                                <a href="https://www.instagram.com/drafting_art/" target="_blank">
+                                    <img class="img2" src="instagram.png" alt="IG" class="responsive" width="150" height="150"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="container">
+                                <a href="https://github.com/Carr-23" target="_blank">
+                                    <img class="img2" src="github.png" alt="Git" class="responsive" width="150" height="150"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="container">
+                                <a href="mailto:brauliocarrion@gmail.com?Subject=Hello%20There" target="_blank">
+                                    <img class="img2" src="mail.png" alt="Mail" class="responsive" width="150" height="150"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </div>
+            </div>
+        </table>
 
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-<img style="padding: 2%; float: right;" src="TopView.png" alt="iCar" width=25% height=25%>
-<p><style = "margin-top: 10%,"></style></p>
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
+    </div>
+    <!--https://www.w3schools.com/howto/howto_js_navbar_sticky.asp-->
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
 
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-<img style="padding: 2%; float: left;" src="breakerDuel.png" alt="Breaker Duel" width=25% height=10%>
-<p><style = "margin-top: 10%,"></style></p>
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
 
-<div class="header" id="INDEV">
-<h1>In Development
-</h1>
-</div>
-
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
-
-<div class="header" id="OTHER">
-<h1>Other Projects
-</h1>
-</div>
-
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
-
-<div class="header" id="HOB">
-<h1>Hobbies
-</h1>
-</div>
-
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
-
-<div class="header" id="CONT">
-<h1>Contact
-</h1>
-</div>
-
-<div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
-My friends always describe me as nice, welcoming, & openhanded and I couldn't agree more. I always try my best to include others in things because getting involved is always nice. No one wants to be left out/alone and I make sure those who are, aren't. Once I welcome people in and they feel more comfortable, they may describe me as energetic, outgoing, and always talking. When people get comfortable they tend to let loose, and thats when someones true self shows. This is the best time people get to know me and I get to know them. This is always the most fun part which can be seen in the way I act.
-</div>
-
-<div class = "bgimg-2">
-</div>
-
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <div class="bgimg-2">
+    </div>
 </body>
+
 </html>
