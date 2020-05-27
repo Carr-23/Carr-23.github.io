@@ -187,6 +187,15 @@
             opacity: 0.3;
         }
 
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+
         a:link {
             color: green;
         }
@@ -377,27 +386,30 @@
         <div class="header" id="CONT">
             <h1>Contact</h1>
         </div>
-
-        <table border="0" align="center" cellpadding="30%">
             <div class="clearfix">
                 <div style="text-align:center;padding:2vw 15vw;text-align: justify;font-size: 20px;">
 
+                  <div class="row">
+                    <div class="column">
                             <div class="container">
                                 <a href="https://www.instagram.com/drafting_art/" target="_blank">
                                     <img class="img2" src="instagram.png" alt="IG" class="responsive" width="150" height="150"></a>
                             </div>
+                            </div>
+                            <div class="column">
                             <div class="container">
                                 <a href="https://github.com/Carr-23" target="_blank">
                                     <img class="img2" src="github.png" alt="Git" class="responsive" width="150" height="150"></a>
                             </div>
+                            </div>
+                            <div class="column">
                             <div class="container">
                                 <a href="mailto:brauliocarrion@gmail.com?Subject=Hello%20There" target="_blank">
                                     <img class="img2" src="mail.png" alt="Mail" class="responsive" width="150" height="150"></a>
                             </div>
+                            </div>
                 </div>
             </div>
-        </table>
-
     </div>
     <!--https://www.w3schools.com/howto/howto_js_navbar_sticky.asp-->
     <script>
